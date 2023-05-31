@@ -35,8 +35,16 @@ function Garage(props) {
   );
 }
 
+function Goal3(props) {
+  const isGoal = props.isGoal;
+  return (
+    <>
+      { isGoal ? <MadeGoal/> : <MissedGoal/> }
+    </>
+  );
+}
 root.render(
-  <Garage cars={cars}/>
+  <Goal3 isGoal={true}/>
 );
 
 // If you want to start measuring performance in your app, pass a function
